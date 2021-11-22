@@ -1,6 +1,14 @@
+
+    //formato normal
+/*
 import methodOverride from "method-override";
 import cors from "cors";
-import express from "express";
+import express from "express"; */
+
+  //Formato si subimos repo a Heroku
+const methodOverride = require("method-override");
+const cors = require("cors");
+const express = require("express");
 //
 const app = express();
 const log = console.log;
@@ -16,6 +24,8 @@ app.get("/users", (req, res)=>{
     res.send(users);
     
 });
+
+
 
 //borrar elemento array
 app.delete("/users/delete/:nombre", (req,res)=>{
@@ -46,10 +56,3 @@ app.listen(port, ()=>{
 
 
 
-//en json
-/* "scripts":{
-    "dev":"nodemon -r esm app.js"
-},  */
-
-
-//npm run dev  (para correr en json)
